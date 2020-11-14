@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProdukController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,27 +34,16 @@ Route::get('/contact', function () {
 Route::get('/admin', function () {
     return view('admin.admin');
 });
-Route::get('/specialsoffer2', function () {
-    return view('specialsoffer2');
-});
-Route::get('/delivery2', function () {
-    return view('delivery2');
-});
-Route::get('/contact2', function () {
-    return view('contact2');
-});
-Route::get('/beranda', function () {
-    return view('beranda');
-});
-Route::get('/produk', function () {
-    return view('produk');
-});
-Route::get('/kategori', function () {
-    return view('kategori');
-});
-Route::get('/promo', function () {
-    return view('promo');
-});
-Route::get('/login', function () {
-    return view('login');
-});
+
+Route::get('beranda', [HomeController::class, 'showBeranda']);
+Route::get('kategori', [HomeController::class, 'showKategori']);
+Route::get('promo', [HomeController::class, 'showPromo']);
+Route::get('login', [AuthController::class, 'showLogin']);
+
+Route::get('produk', [ProdukController::class, 'index']);
+Route::get('create', [ProdukController::class, 'create']);
+Route::post('produk', [ProdukController::class, 'store']);
+Route::get('produk/{produk}',[ProdukController::class, 'show']);
+Route::get('produk/{produk}/edit',[ProdukController::class, 'edit']);
+Route::put('produk/{produk}',[ProdukController::class, 'update']);
+Route::delete('produk/{produk}',[ProdukController::class, 'destroy']);

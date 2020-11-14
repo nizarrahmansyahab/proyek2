@@ -1,158 +1,100 @@
-<body class="header-fixed sidebar-fixed sidebar-dark header-light" id="body">
-  
-  <script>
-    NProgress.configure({ showSpinner: false });
-    NProgress.start();
-  </script>
-
-  
-  <div id="toaster"></div>
-  
-
-  <div class="wrapper">
-    <!-- Github Link -->
-    <a href="https://github.com/tafcoder/sleek-dashboard"  target="_blank" class="github-link">
-      <svg width="70" height="70" viewBox="0 0 250 250" aria-hidden="true">
-        <defs>
-          <linearGradient id="grad1" x1="0%" y1="75%" x2="100%" y2="0%">
-            <stop offset="0%" style="stop-color:#896def;stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#482271;stop-opacity:1" />
-          </linearGradient>
-        </defs>
-        <path d="M 0,0 L115,115 L115,115 L142,142 L250,250 L250,0 Z" fill="url(#grad1)"></path>
-      </svg>
-      <i class="mdi mdi-github-circle"></i>
-    </a>
-
-            <!--
-          ====================================
-          ——— LEFT SIDEBAR WITH FOOTER
-          =====================================
-        -->
-        
-
-
-    <div class="page-wrapper">
-                <!-- Header -->
-          <header class="main-header " id="header">
-            <nav class="navbar navbar-static-top navbar-expand-lg">
-              <!-- Sidebar toggle button -->
-              <button id="sidebar-toggler" class="sidebar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-              </button>
-              <!-- search form -->
-              <div class="search-form d-none d-lg-inline-block">
-                <div class="input-group">
-                  <button type="button" name="search" id="search-btn" class="btn btn-flat">
-                    <i class="mdi mdi-magnify"></i>
-                  </button>
-                  <input type="text" name="query" id="search-input" class="form-control" placeholder="'button', 'chart' etc."
-                    autofocus autocomplete="off" />
-                </div>
-                <div id="search-results-container">
-                  <ul id="search-results"></ul>
-                </div>
-              </div>
-
-              <div class="navbar-right ">
-                <ul class="nav navbar-nav">
-                  <li class="dropdown notifications-menu">
-                    <button class="dropdown-toggle" data-toggle="dropdown">
-                      <i class="mdi mdi-bell-outline"></i>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-right">
-                      <li class="dropdown-header">You have 5 notifications</li>
-                      <li>
-                        <a href="#">
-                          <i class="mdi mdi-account-plus"></i> New user registered
-                          <span class=" font-size-12 d-inline-block float-right"><i class="mdi mdi-clock-outline"></i> 10 AM</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="mdi mdi-account-remove"></i> User deleted
-                          <span class=" font-size-12 d-inline-block float-right"><i class="mdi mdi-clock-outline"></i> 07 AM</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="mdi mdi-chart-areaspline"></i> Sales report is ready
-                          <span class=" font-size-12 d-inline-block float-right"><i class="mdi mdi-clock-outline"></i> 12 PM</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="mdi mdi-account-supervisor"></i> New client
-                          <span class=" font-size-12 d-inline-block float-right"><i class="mdi mdi-clock-outline"></i> 10 AM</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="mdi mdi-server-network-off"></i> Server overloaded
-                          <span class=" font-size-12 d-inline-block float-right"><i class="mdi mdi-clock-outline"></i> 05 AM</span>
-                        </a>
-                      </li>
-                      <li class="dropdown-footer">
-                        <a class="text-center" href="#"> View All </a>
-                      </li>
+ <div class="dashboard-header">
+            <nav class="navbar navbar-expand-lg bg-white fixed-top">
+                <a class="navbar-brand" href="index.html">SHOPEI</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto navbar-right-top">
+                        <li class="nav-item">
+                            <div id="custom-search" class="top-search-bar">
+                                <input class="form-control" type="text" placeholder="Search..">
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown notification">
+                            <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-fw fa-bell"></i> <span class="indicator"></span></a>
+                            <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
+                                <li>
+                                    <div class="notification-title"> Notification</div>
+                                    <div class="notification-list">
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-action active">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/u6.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Yahya</span>Telah membeli sebuah sepeda.
+                                                        <div class="notification-date">2 menit yang lalu</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/u4.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Rizki </span>membatalkan pesanan
+                                                        <div class="notification-date">2 hari yang lalu</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-4.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Candra</span> Telah membeli sebuah baju
+                                                        <div class="notification-date">2 hari yang lalu</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list-footer"> <a href="#">View all notifications</a></div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown connection">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-fw fa-th"></i> </a>
+                            <ul class="dropdown-menu dropdown-menu-right connection-dropdown">
+                                <li class="connection-list">
+                                    <div class="row">
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="assets/images/github.png" alt="" > <span>Github</span></a>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="assets/images/dribbble.png" alt="" > <span>Dribbble</span></a>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="assets/images/dropbox.png" alt="" > <span>Dropbox</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="assets/images/bitbucket.png" alt=""> <span>Bitbucket</span></a>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="assets/images/mail_chimp.png" alt="" ><span>Mail chimp</span></a>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="assets/images/slack.png" alt="" > <span>Slack</span></a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="conntection-footer"><a href="#">More</a></div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown nav-user">
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{ URL :: asset ('assets/images/12.jpg')}}" alt="" class="user-avatar-md rounded-circle"></a>
+                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
+                                <div class="nav-user-info">
+                                    <h5 class="mb-0 text-white nav-user-name">Nizar Rahman Syahab </h5>
+                                    <span class="status"></span><span class="ml-2">Available</span>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
+                                <a class="dropdown-item" href="{{url('login')}}"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                            </div>
+                        </li>
                     </ul>
-                  </li>
-                  <li class="right-sidebar-in right-sidebar-2-menu">
-                    <i class="mdi mdi-settings mdi-spin"></i>
-                  </li>
-                  <!-- User Account -->
-                  <li class="dropdown user-menu">
-                    <button href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                      <img src="assets/img/user/u4.jpg" class="user-image" alt="User Image" />
-                      <span class="d-none d-lg-inline-block">Nizar Rahman Syahab</span>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-right">
-                      <!-- User image -->
-                      <li class="dropdown-header">
-                        <img src="assets/img/user/u4.jpg" class="img-circle" alt="User Image" />
-                        <div class="d-inline-block">
-                          Nizar Rahman Syahab <small class="pt-1">nizarsyahab2121@gmail.com</small>
-                        </div>
-                      </li>
-
-                      <li>
-                        <a href="user-profile.html">
-                          <i class="mdi mdi-account"></i> My Profile
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="mdi mdi-email"></i> Message
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#"> <i class="mdi mdi-diamond-stone"></i> Projects </a>
-                      </li>
-                      <li class="right-sidebar-in">
-                        <a href="javascript:0"> <i class="mdi mdi-settings"></i> Setting </a>
-                      </li>
-
-                      <li class="dropdown-footer">
-                        <a href="{{url('login')}}"> <i class="mdi mdi-logout"></i> Log Out </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
+                </div>
             </nav>
-
-
-          </header>
-
-
-      <div class="content-wrapper">
-        <div class="content">						 
-                  <!-- Top Statistics -->
-                
-
-
-						<div class="row">
-							<div class="col-xl-8 col-md-12">
-                      <!-- Sales Graph -->
-                      
-</div>
+        </div>
