@@ -20,7 +20,7 @@ if(Route::current()->uri == $route) return 'active';
                                 <i class="fa fa-fw fa-home"></i>Beranda</a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link {{checkRouteActive('produk')}} " href="{{url('produk')}}">
+                                <a class="nav-link {{checkRouteActive('admin/produk')}} " href="{{url('admin/produk')}}">
                                 <i class="fa fa-fw fa-shopping-cart"></i>Produk</a>
                             </li>
                             <li class="nav-item ">
@@ -28,18 +28,18 @@ if(Route::current()->uri == $route) return 'active';
                                 <i class="fa fa-fw fa-address-book"></i>Kategori</a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link {{checkRouteActive('promo')}} " href="{{url('promo')}}">
-                                <i class="fa fa-fw fa-tags"></i>Promo</a>
+                                <a class="nav-link {{checkRouteActive('admin/user')}} " href="{{url('admin/user')}}">
+                                <i class="fa fa-fw fa-tags"></i>User</a>
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Master Data</a>
                                 <div id="submenu-1" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link " href="dashboard-finance.html">Finance</a>
+                                            <a class="nav-link " href="dashboard-finance.html">Pelanggan</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="dashboard-sales.html">Sales</a>
+                                            <a class="nav-link" href="dashboard-sales.html">Supplier</a>
                                         </li>
                                         
                                     </ul>

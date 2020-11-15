@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,12 +39,12 @@ Route::get('/admin', function () {
 Route::get('beranda', [HomeController::class, 'showBeranda']);
 Route::get('kategori', [HomeController::class, 'showKategori']);
 Route::get('promo', [HomeController::class, 'showPromo']);
-Route::get('login', [AuthController::class, 'showLogin']);
 
-Route::get('produk', [ProdukController::class, 'index']);
-Route::get('create', [ProdukController::class, 'create']);
-Route::post('produk', [ProdukController::class, 'store']);
-Route::get('produk/{produk}',[ProdukController::class, 'show']);
-Route::get('produk/{produk}/edit',[ProdukController::class, 'edit']);
-Route::put('produk/{produk}',[ProdukController::class, 'update']);
-Route::delete('produk/{produk}',[ProdukController::class, 'destroy']);
+Route::prefix('admin')->middleware('auth')->group(function(){
+	Route::resource('produk', ProdukController::class);
+	Route::resource('user', UserController::class);
+});
+
+Route::get('login', [AuthController::class, 'showLogin'])->name('login');
+Route::post('login', [AuthController::class, 'LoginProcess']);
+Route::get('logout', [AuthController::class, 'logout']);
