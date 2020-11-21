@@ -15,7 +15,7 @@
 							@method("PUT")
 							<div class="form-group">
 								<label for="" class="control-label">Nama</label>
-								<input type="text" class="form-control" name="nama" value="{{$produk->nama}}">>
+								<input type="text" class="form-control" name="nama" value="{{$produk->nama}}">
 							</div>
 							<div class="row">
 								<div class="col-md-6">
@@ -27,13 +27,13 @@
 								<div class="col-md-3">
 									<div class="form-group">
 										<label for="" class="control-label">Berat</label>
-										<input type="text" class="form-control" name="berat" value="{{$produk->berat}}">>
+										<input type="text" class="form-control" name="berat" value="{{$produk->berat}}">
 									</div>
 								</div>	
 								<div class="col-md-3">
 									<div class="form-group">
 										<label for="" class="control-label">Stok</label>
-										<input type="text" class="form-control" name="stok" value="{{$produk->stok}}">>
+										<input type="text" class="form-control" name="stok" value="{{$produk->stok}}">
 									</div>
 								</div>
 							</div>

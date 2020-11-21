@@ -40,7 +40,8 @@ Route::get('beranda', [HomeController::class, 'showBeranda']);
 Route::get('kategori', [HomeController::class, 'showKategori']);
 Route::get('promo', [HomeController::class, 'showPromo']);
 
-Route::prefix('admin')->middleware('auth')->group(function(){
+Route::prefix('admin')->middleware('auth')->group(function(){																		
+	Route::post('produk/filter', [ProdukController::class, 'filter']);
 	Route::resource('produk', ProdukController::class);
 	Route::resource('user', UserController::class);
 });

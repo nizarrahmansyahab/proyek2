@@ -98,21 +98,26 @@
     </ul>
 	
 	<hr class="soft"/>
-	<form class="form-horizontal span6">
-		<div class="control-group">
-		  <label class="control-label alignL">Cari </label>
-			<select>
-              <option>Priduct name A - Z</option>
-              <option>Priduct name Z - A</option>
-              <option>Priduct Stoke</option>
-              <option>Price Lowest first</option>
-            </select>
-		</div>
-	  </form>
+				
+				<div class="card-body ">
+					<form action="{{url('admin/produk/filter')}}" method="post">
+						<div class="form-group">
+							<label for="" class="control-label">Nama</label>
+							<input type="text" class="form-control" name="nama" value="{{$nama ?? ''}}">
+						</div>
+						<div class="form-group">
+							<label for="" class="control-label">Stok</label>
+							<input type="text" class="form-control" name="stok" value="{{$stok ?? ''}}">
+						</div>
+						<button class="btn btn-dark float-right"><i class="fa fa-search"></i>Filter</button>
+					</form>
+				</div>
 	<div id="myTab" class="pull-right">
 	 <a href="#listView" data-toggle="tab"><span class="btn btn-large"><i class="icon-list"></i></span></a>
 	 <a href="#blockView" data-toggle="tab"><span class="btn btn-large btn-primary"><i class="icon-th-large"></i></span></a>
 	</div>
+
+
 <br class="clr"/>
 <div class="tab-content">
 	<div class="tab-pane" id="listView">
@@ -141,6 +146,8 @@
 				</form>
 			</div>
 	</div>
+
+
 	<hr class="soft"/>
 	<div class="row">	  
 			<div class="span2">
@@ -162,11 +169,13 @@
 				<label class="checkbox">
 				<input type="checkbox">  Adds product to compair
 				</label><br/>
+
 				<a href="product_details.html" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
 				<a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
 			</form>
 			</div>
 	</div>
+
 	<hr class="soft"/>
 	<div class="row">	  
 			<div class="span2">
